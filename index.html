@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Heights – Your Exquisite Escape</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+    //Jquery
+    function navbarchange() {
+        var $navbar = $("#navbar");
+        $navbar.toggleClass("responsive");
+    }
+
+    //Javascript
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('message').value;
+
+        if (name === '' || email === '' || message === '') {
+            alert('Please fill out all required fields.');
+            return false;
+        }
+
+        return true;
+    }
+    //<p>Address: 123 Luxury St, City, Country</p>
+    //<p>Phone: (123) 456-7890</p>
+    //<p>Email: info@hotelname.com</p>
+
+    </script>
+
+    <div class="nav-container" id="navbar">
+        <h1>Azure Heights</h1>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="facility.html">Facilities</a></li>
+        <li><a class="book" href="book.html" style="color: white;">Book Now</a></li>
+        <a class="icon" onclick="navbarchange()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="home">
+        <div id="home-left">
+            <h1 style="font-size: 40px;">Welcome to Azure Heights – Your Exquisite Escape</h1>
+            <p style="font-size: 20px;">Nestled in the heart of Everglade, Azure Heights offers an unparalleled experience of comfort, elegance, and serenity. Whether you're visiting for business, leisure, or a special occasion, our hotel is designed to cater to all your needs with a touch of sophistication and personalized service.</p>
+        </div>
+        <div id="home-right">
+
+        </div>
+    </div>
+
+    <div class="about">
+        <h1 id="facility-title" style="text-align: center;">Facilities</h1>
+
+        <div id="about-text">
+            <h1>ABOUT US</h1>
+            <p style="font-size: 20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <button onclick="document.location='about.html'">Read More</button>
+        </div>
+        <div id="about-img">
+            <img src="images/deluxe.jpg">
+        </div>
+    </div>
+
+    <h1 id="facility-title" style="text-align: center;">Facilities</h1>
+
+    <div class="facility">
+        <div id="f1">
+            <img src="images/dining.jpg">
+            <h3>Restaurant</h3>
+        </div>
+        <div id="f2">
+            <img src="images/pool.jpg">
+            <h3>Rooftop Pool</h3>
+        </div>
+        <div id="f3">
+            <img src="images/meeting_wide.jpg">
+            <h3>Meeting Room</h3>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="facility-btn">
+        <button onclick="document.location='facility.html'">See More</button>
+    </div>
+
+    <h1 id="facility-title" style="text-align: center;">Our Rooms</h1>
+
+    <h3 style="text-align: center;">Best Rooms</h3>
+
+    <div class="room">
+        <div id="r1">
+            <div><img src="Img/Junior.jpg"></div>
+            <h3>Suite Room</h3>
+            <p>A luxurious room with a stunning view of the city.</p>
+        </div>
+        <div id="r2">
+            <div><img src="Img/Family-Room-Bedroom.jpg"></div>
+            <h3>Family Room</h3>
+            <p>A perfect room for your family.</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="facility-btn">
+        <button onclick="document.location='rooms.html'">See More</button>
+    </div>
+
+    <h1 id="facility-title" style="text-align: center;">Contact Us</h1>
+
+    <div class="contact">
+        <div id="contact-text">
+            <p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div id="contact-text2">
+            <form onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your Full Name"><br>
+                <input type="email" id="email" name="email" placeholder="Your Email"><br>
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Azure Heights. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

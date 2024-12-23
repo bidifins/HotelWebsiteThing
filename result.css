@@ -1,0 +1,38 @@
+body {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url('images/HomeBanner.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.check {
+  border-radius: 50px;
+  width: 750px;
+  margin: auto;
+  font-size: 20px;
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+@media screen and (max-width: 800px) { 
+    .check {
+        /*color: white;*/
+        width: 450px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+.item{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 55px;
+    background-image: url('images/HomeBanner.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.home h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
+.home h3 {
+    text-align: center;
+    font-style: oblique;
+    color: white;
+    text-shadow: 0 0 10px #005CB9;
+}
+
+.room-box img{
+    width: 20rem;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.room-box{
+    min-height: 440px;
+    max-width: 360px;
+    border: 0;
+    margin: 0 1.5 4rem;
+    margin-bottom: 2.5rem;
+    padding: 3px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    gap: 0.5rem;
+    transition: 0.4s ease-in-out;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.room-box:hover{
+    border: 0;
+    transform: translateY(-3px)scale(1.01);
+    box-shadow: 0 0 25px #007FFF;
+}
+
+.room-box h2{
+    font-size: 2.3rem;
+}
+
+.room-box p{
+    font-size: 1.3rem;
+}
+
+.harga span{
+    color: #007FFF;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.rating{
+    color: gold;
+    font-size: 1.3rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/*.nav-container li a:hover:not(.book) {
+    background-color: #111;
+}*/
+
+@media screen and (max-width: 800px) { 
+    .nav-container h1 {
+        text-align: center;
+        float: none;
+        padding-right: 0px;
+    }
+    .nav-container li {
+        float: none;
+    }
+    #home-left {
+        /*color: white;*/
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 800px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    .room-box{
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .room-box img{
+        max-width: 100%;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    .heading3{
+        font-size: 1.2rem;
+    }
+}

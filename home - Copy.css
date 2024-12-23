@@ -1,0 +1,263 @@
+bbody {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+.nav-container h1 {
+    float: right;
+    padding-right: 25px;
+}
+
+.nav-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+
+.nav-container li {
+    float: left;
+    padding-top: 15px;
+}
+
+.nav-container li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.book {
+    border-radius: 50px;
+    background-color: #04AA6D;
+    transition-duration: 0.4s;
+}
+
+.book:hover {
+    background-color: #088A5A;
+}
+
+/*.nav-container li a:hover:not(.book) {
+    background-color: #111;
+}*/
+
+@media screen and (max-width: 800px) { 
+    .nav-container h1 {
+        text-align: center;
+        float: none;
+        padding-right: 0px;
+    }
+    .nav-container li {
+        float: none;
+    }
+    #home-left {
+        /*color: white;*/
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url('images/HomeBanner.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+.home div {
+    width: 600px;
+    height: 500px;
+    margin: 10px;
+}
+
+#home-left {
+    /*color: white;*/
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+#home-right {
+    float: right;
+}
+
+.about {
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about div {
+    width: 600px;
+    margin: 10px;
+}
+
+#about-img {
+    float: right;
+    overflow: hidden;
+}
+
+#about-img img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+#about-img img:hover {
+    transform: scale(1.2);
+}
+
+#about-text button {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+
+#about-text button:hover {
+    background-color: #088A5A;
+}
+
+#facility-title {
+    padding-top: 75px;
+}
+
+.facility {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.facility img {
+    width: 100%;
+    height: 75%;
+}
+
+.facility > div {
+    width: 350px;
+    margin: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.facility > div:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#facility-btn {
+    text-align: center;
+}
+
+#facility-btn button {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+
+#facility-btn button:hover {
+    background-color: #088A5A;
+}
+
+.facility h3 {
+    text-align: center;
+}
+
+.room {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+}
+
+.room > div {
+    width: 500px;
+    margin: 10px;
+    /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.room > div:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.room h3 {
+    text-align: center;
+}
+
+.room p {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact div {
+    width: 500px;
+    margin: 10px;
+}
+
+#contact-text2 {
+    float: right;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form select, form button {
+    margin: 0.5em 0;
+}
+
+form input, form select {
+    padding: 0.5em;
+    width: 80%;
+    max-width: 400px;
+}
+
+form button {
+    padding: 0.5em 2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

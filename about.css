@@ -1,0 +1,149 @@
+body {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) { 
+    #home-left {
+        /*color: white;*/
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 58px;
+    padding-bottom: 68px;
+    background-image: url('images/HomeBanner.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.home h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
+.about {
+    padding-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about div {
+    width: 600px;
+    margin: 20px;
+}
+
+#about-img {
+    float: right;
+    overflow: hidden;
+}
+
+#about-img img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+#about-img2 {
+    float: left;
+    overflow: hidden;
+}
+
+#about-img2 img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+#about-text {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 19%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+  border-radius: 25px;
+  height: 160px;
+  transition: 0.3s all ease-in-out;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.expand {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    display: none;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+#expandedImg {
+    border-radius: 25px;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

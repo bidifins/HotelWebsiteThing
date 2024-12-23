@@ -1,0 +1,249 @@
+body {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) { 
+    #home-left{
+        padding-left: 0 !important;
+    }
+    #home-right {
+        display: none;
+    }
+}
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url('images/HomeBanner.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+#home-left h1 {
+    text-shadow: 5px 5px black;
+}
+
+#home-left p {
+    text-shadow: 2px 2px black;
+}
+
+.home div {
+    width: 600px;
+    height: 500px;
+    margin: 10px;
+}
+
+#home-left {
+    /*color: white;*/
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+#home-right {
+    float: right;
+}
+
+.about {
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about div {
+    width: 600px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+#about-img {
+    float: right;
+    overflow: hidden;
+}
+
+#about-img img {
+    width: 100%;
+    border-radius: 25px;
+    transition: 0.5s all ease-in-out;
+}
+
+#about-img img:hover {
+    transform: scale(1.2);
+}
+
+#about-text button {
+    background-color: #007FFF;
+    color: white;
+    font-size: 18px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+
+#about-text button:hover {
+    background-color: #005CB9;
+}
+
+#facility-title {
+    padding-top: 75px;
+}
+
+.facility {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.facility img {
+    width: 100%;
+    height: 75%;
+    border-radius: 25px;
+}
+
+.facility > div {
+    width: 350px;
+    margin: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+}
+
+.facility > div:hover {
+    box-shadow: 0 0 25px #007FFF;
+    transform: translateY(-3px)scale(1.01);
+}
+
+#facility-btn {
+    text-align: center;
+}
+
+#facility-btn button {
+    background-color: #007FFF;
+    color: white;
+    font-size: 18px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+
+#facility-btn button:hover {
+    background-color: #005CB9;
+}
+
+.facility h3 {
+    text-align: center;
+}
+
+.room {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.room > div {
+    width: 500px;
+    margin: 10px;
+    /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+}
+
+.room > div:hover {
+    box-shadow: 0 0 25px #007FFF;
+    transform: translateY(-3px)scale(1.01);
+}
+
+.room h3 {
+    text-align: center;
+}
+
+.room p {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact div {
+    width: 500px;
+    margin: 10px;
+}
+
+#contact-text2 {
+    float: right;
+}
+
+form {
+    font-family: Corbel;
+    width: 100%;
+    text-align: center;
+}
+
+form label, form input, form select, form button {
+    margin: 2%;
+}
+
+form label, form input, form select, form textarea {
+    margin: 2%;
+    border-radius: 10px;
+}
+
+form input {
+    padding: 0.5em;
+    width: 98%;
+    height: 50px;
+}
+
+form select {
+    padding: 0.5em;
+    width: 98%;
+    height: 50px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 150px;
+}
+
+form button {
+    padding: 0.5em 2em;
+    background-color: #007FFF;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005CB9;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

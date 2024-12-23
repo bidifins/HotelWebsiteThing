@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Azure Heights – Your Exquisite Escape</title>
+        <link rel="stylesheet" href="corak.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <script>
+        function navbarchange() {
+            var $navbar = $("#navbar");
+            $navbar.toggleClass("responsive");
+        }
+        </script>
+
+        <div class="nav-container" id="navbar">
+            <h1>Azure Heights</h1>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="facility.html">Facilities</a></li>
+            <li><a class="book" href="book.html" style="color: white;">Book Now</a></li>
+            <a class="icon" onclick="navbarchange()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="home">
+            <div>
+                <h2>Facilities</h2>
+                <h3>Stuff you can do in our hotel.</h3>
+            </div>
+        </div>
+
+        <div class="facilities">
+            <div class="wrapper">
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Restaurant.jpg" alt="Restaurant">
+                    </div>
+                    <h3>Restaurant</h3>
+                    <p>Delicious foods and drinks made from the best chef.</p>
+                </div>
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Spa.jpg" alt="Spa">
+                    </div>
+                    
+                    <h3>Spa</h3>
+                    <p>Relax your mind and body in this beauty spa.</p>
+                </div>
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Gymnasium.jpg" alt="Gym">
+                    </div>
+                    
+                    <h3>Gymnasium</h3>
+                    <p>Build your stamina and muscle without going out of the hotel.</p>
+                </div>
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Pool.jpg" alt="Swimming Pool">
+                    </div>
+                    
+                    <h3>Swimming Pool</h3>
+                    <p>Swim to your heart content in this massive pool.</p>
+                </div>
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Room.jpg" alt="Meeting Room">
+                    </div>
+                    
+                    <h3>Meeting Room</h3>
+                    <p>Book your super important meeting here.</p>
+                </div>
+                <div class="item">
+                    <div id="imag">
+                        <img src="Img/Ballroom.jpg" alt="Ballroom">
+                    </div>
+                    <h3>Ballroom</h3>
+                    <p>Make your favourite memories here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="other">
+            <h2>Other Facilities :</h2>
+            <div class="list">
+                <div class="box">
+                    <i class="fa-solid fa-wifi icon"></i>&nbsp;&nbsp; Free wifi
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-phone icon"></i>&nbsp;&nbsp; Telephone service
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-utensils icon"></i>&nbsp;&nbsp; Free breakfast
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-concierge-bell icon"></i>&nbsp;&nbsp; Room service
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Azure Heights. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

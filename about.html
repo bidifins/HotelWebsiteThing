@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Heights – Your Exquisite Escape</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+    //Jquery
+    function navbarchange() {
+        var $navbar = $("#navbar");
+        $navbar.toggleClass("responsive");
+    }
+
+    //Javascript
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      //imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+    </script>
+
+    <div class="nav-container" id="navbar">
+        <h1>Azure Heights</h1>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="book.html">Facilities</a></li>
+        <li><a class="book" href="book.html" style="color: white;">Book Now</a></li>
+        <a class="icon" onclick="navbarchange()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="home">
+        <div>
+            <h2>About Us</h2>
+        </div>
+    </div>
+
+    <div class="about">
+        <div id="about-text">
+            <h1 style="font-size: 40px;">Azure Heights – Your Exquisite Escape</h1>
+            <p style="font-size: 20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div id="about-img">
+            <img width="500px" src="img/Pool.jpg">
+        </div>
+    </div>
+
+    <div class="about">
+        <div id="about-img2">
+            <img width="500px" src="img/Restaurant.jpg">
+        </div>
+        <div id="about-text2">
+            <h1 style="font-size: 40px;">10 Years Of Service</h1>
+            <p style="font-size: 20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+
+    <div style="text-align:center;">
+      <h2 style="font-size: 40px;">Our Gallery</h2>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="Img/lobby.jpg" alt="Ballroom" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="Img/Pool.jpg" alt="Pool" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="Img/Spa.jpg" alt="Spa" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="Img/Gymnasium.jpg" alt="Gym" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <div class="expand">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <br><br><br><br>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hotel Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

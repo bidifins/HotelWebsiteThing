@@ -1,0 +1,77 @@
+.nav-container h1 {
+    float: right;
+    padding-right: 25px;
+}
+
+.nav-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    position: static;
+}
+
+.nav-container li {
+    float: left;
+    padding-top: 15px;
+}
+
+.nav-container li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.book {
+    border-radius: 50px;
+    background-color: #007FFF;
+    transition-duration: 0.4s;
+}
+
+.book:hover {
+    background-color: #005CB9;
+}
+
+.nav-container .icon {
+    display: none;
+}
+
+@media screen and (max-width: 800px) { 
+    .nav-container li {display: none;}
+    .nav-container h1 {
+        float: left;
+        padding-left: 15px;
+    }
+    .nav-container a.icon {
+        float: right;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 29px 20px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-container.responsive {position: relative;}
+    .nav-container.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav-container.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .nav-container.responsive h1 {
+        display: none;
+    }
+}

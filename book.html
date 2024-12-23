@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Heights – Your Exquisite Escape</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validate.js" defer></script>
+</head>
+<body>
+    <script>
+    //Jquery
+    $(document).ready(function() {
+        $('#payment').change(function() {
+            if ($(this).val() === 'card') {
+                $('#credit-card').show();
+            } else {
+                $('#credit-card').hide();
+            }
+        });
+    });
+
+    function navbarchange() {
+        var $navbar = $("#navbar");
+        $navbar.toggleClass("responsive");
+    }
+
+    //JavaScript
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var checkin = document.getElementById('checkin').value;
+        var checkout = document.getElementById('checkout').value;
+        var specialRequest = document.getElementById('request').value;
+        var paymentType = document.getElementById('payment').value;
+
+        if (name === '' || email === '' || phone === '' || checkin === '' || checkout === '') {
+            alert('Please fill out all required fields.');
+            return false;
+        }
+
+        if (new Date(checkin) > new Date(checkout)) {
+            alert('Check-in date cannot be later than Check-out date.');
+            return false;
+        }
+
+        return true;
+    }
+    </script>
+
+    <div class="nav-container" id="navbar">
+        <h1>Azure Heights</h1>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="facility.html">Facilities</a></li>
+        <li><a class="book" href="book.html" style="color: white;">Book Now</a></li>
+        <a class="icon" onclick="navbarchange()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="background">
+        <div class="home">
+            <div id="home-left">
+                <h1>Booking Forms</h1>
+            </div>
+        </div>
+
+        <div class="booking">
+            <form onsubmit="return validateForm()">
+                <label>Full Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Full Name"><br>
+                <label>Email</label><br>
+                <input type="email" id="email" name="email" placeholder="email@com"><br>
+                <label>Phone No.</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="1234567890"><br>
+                <div id="date-div">
+                    <div id="date-left">
+                        <label>Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin" >
+                    </div>
+                    <div id="date-right">
+                        <label>Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout" >
+                    </div>
+                </div>
+                <label>Room Type</label><br>
+                <select id="room" name="room" >
+                    <option value="Single">Single Room</option>
+                    <option value="Twin">Twin Bed Room</option>
+                    <option value="deluxe">Family Room</option>
+                    <option value="suite">Deluxe Room</option>
+                    <option value="deluxe">Junior Suite Room</option>
+                    <option value="suite">Suite Room</option>
+                </select><br>
+                <label>Payment Type</label><br>
+                <select id="payment" name="room" >
+                    <option value="spot">On the spot</option>
+                    <option value="card">Credit Card</option>
+                </select><br>
+                <div id="credit-card">
+                    <label>Credit Card Information:</label><br>
+                    <input type="text" id="card-number" name="card-number" placeholder="Card Number"><br>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY"><br>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV"><br>
+                </div><br>
+                <button type="submit">Book Now</button>
+                <br>
+                .
+            </form>
+        </div>
+
+        <br><br><br><br>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Azure Heights. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!--
+hi :3333
+-->

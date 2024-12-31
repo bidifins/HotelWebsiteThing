@@ -6,8 +6,8 @@ pipeline {
             steps {
                 script {
                     echo "Cloning repository..."
-                    // Clone the branch based on which one is being built
-                    git branch: "${BRANCH_NAME}", url: 'https://github.com/bidifins/HotelWebsiteThing.git'
+                    // Clone the 'main' branch
+                    git branch: 'main', url: 'https://github.com/bidifins/HotelWebsiteThing.git'
                 }
             }
         }
@@ -15,8 +15,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    echo "Building Docker image for ${BRANCH_NAME} branch..."
-                    bat "docker build -t hotel-website-image-${BRANCH_NAME} ."
+                    echo "Building Docker image for the main branch..."
+                    bat "docker build -t hotel-website-image-main ."
                 }
             }
         }
@@ -24,28 +24,17 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    // Define a predictable port for each branch
-                    def branchPort
-                    switch (BRANCH_NAME) {
-                        case 'main':
-                            branchPort = 8081
-                            break
-                        case 'development':
-                            branchPort = 8082
-                            break
-                       
-                        default:
-                            branchPort = 4000  // Default port for unknown branches
-                    }
+                    // Use a fixed port for the main branch
+                    def branchPort = 3008
 
-                    echo "Stopping and removing any existing container for ${BRANCH_NAME}..."
-                    bat "docker stop hotel-website-container-${BRANCH_NAME} || exit 0"
-                    bat "docker rm hotel-website-${BRANCH_NAME} || exit 0"
+                    echo "Stopping and removing any existing container for the main branch..."
+                    bat "docker stop hotel-website-container-main || exit 0"
+                    bat "docker rm hotel-website-container-main || exit 0"
 
-                    echo "Running new container for ${BRANCH_NAME} on port ${branchPort}..."
-                    bat "docker run --rm -d --name hotel-website-container-${BRANCH_NAME} -p ${branchPort}:80 hotel-website-image-${BRANCH_NAME}"
+                    echo "Running new container for the main branch on port ${branchPort}..."
+                    bat "docker run --rm -d --name hotel-website-container-main -p ${branchPort}:80 hotel-website-image-main"
 
-                    echo "Container for ${BRANCH_NAME} is running on port ${branchPort}"
+                    echo "Container for the main branch is running on port ${branchPort}"
                 }
             }
         }

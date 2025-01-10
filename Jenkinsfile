@@ -5,6 +5,9 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 script {
+                    echo "Cleaning workspace..."
+                    cleanWs()
+                    
                     echo "Cloning repository..."
                     // Clone the 'main' branch
                     git branch: 'main', url: 'https://github.com/bidifins/HotelWebsiteThing.git'
@@ -16,8 +19,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker image for the main branch..."
-                    bat "docker rmi hotel-website-image-main:latest || exit 0"
-                    bat "docker build -t hotel-website-image-main ."
+                    bat "docker build --no-cache -t hotel-website-image-main ."
                 }
             }
         }

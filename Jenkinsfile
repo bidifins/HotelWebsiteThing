@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker image for the main branch..."
-                    "docker rmi hotel-website-image-main:latest || exit 0"
+                    bat "docker rmi hotel-website-image-main:latest || exit 0"
                     bat "docker build -t hotel-website-image-main ."
                 }
             }

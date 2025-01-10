@@ -5,9 +5,6 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 script {
-                    echo "Cleaning workspace..."
-                    cleanWs()
-                    
                     echo "Cloning repository..."
                     // Clone the 'main' branch
                     git branch: 'main', url: 'https://github.com/bidifins/HotelWebsiteThing.git'
